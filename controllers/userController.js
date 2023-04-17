@@ -177,11 +177,11 @@ export const forgetPassword = catchAsyncError(async (req, res, next) => {
 
   // const message = `Click on the link to reset your password. ${url}. If you have not request then please ignore.`;
 
-  // const resetPasswordUrl = `${process.env.FRONTEND_URL}/resetpassword/${resetToken}`;
+  const resetPasswordUrl = `${process.env.FRONTEND_URL}/resetpassword/${resetToken}`;
 
-  const resetPasswordUrl = `${req.protocol}://${req.get(
-    "host"
-  )}/resetpassword/${resetToken}`;
+  // const resetPasswordUrl = `${req.protocol}://${req.get(
+  //   "host"
+  // )}/resetpassword/${resetToken}`;
 
   const message = `Your password reset token is :- \n\n ${resetPasswordUrl} \n\nIf you have not requested this email then, please ignore it.`;
 
