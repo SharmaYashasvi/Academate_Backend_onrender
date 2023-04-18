@@ -1,6 +1,6 @@
 import { createTransport } from "nodemailer";
 
-export const sendEmail = async (to, subject, text) => {
+export const sendEmailContactRequest = async (to, subject, text) => {
   const transporter = createTransport({
     host: process.env.SMTP_HOST,
     port: process.env.SMTP_PORT,
